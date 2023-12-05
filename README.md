@@ -1,27 +1,25 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+## FlutterFreaks_Video_Player
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+FlutterFreaks_Video_Player is a Flutter package that simplifies the integration of video playback in your Flutter app. With just a video URL, you can seamlessly incorporate video playback with additional features such as play, pause, and control over video speed, similar to YouTube.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+Easy Integration: Simply pass the URL of the video, and the video will start playing in your app.
 
-## Getting started
+Play and Pause: Users can easily control the playback with options to play and pause the video.
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Customizable Video Speed: Enjoy the flexibility of controlling the video speed, providing a user experience similar to popular video platforms.
+
+
+## Example
+
+https://github.com/priyanshutaru/Coding_Contest_App/assets/87292670/55638740-12c9-4277-856f-2cff1b6fef5f
+
+## Gettting Started 
+
+To use this pacakge use flutterfreaks_video_player as dependency in your pubsec.yml file of your flutter project.
+
 
 ## Usage
 
@@ -29,11 +27,39 @@ TODO: Include short and useful examples for package users. Add longer examples
 to `/example` folder.
 
 ```dart
-const like = 'sample';
+import 'package:flutter/material.dart';
+import 'package:flutterfreaks_video_player/flutterfreaks_video_player.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Video Player Example'),
+        ),
+        body: Center(
+          child: FlutterFreaksVideoPlayer(
+            videoUrl: '[https://example.com/sample.mp4](https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4)',
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 ```
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+Contributing: We welcome contributions! Feel free to open issues or submit pull requests.
+
+
+Issue Tracking: If you encounter any issues, please file them on the GitHub repository.
+
+
+Community Support: Join our community on github for discussions and assistance.
